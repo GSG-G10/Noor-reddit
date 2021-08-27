@@ -8,6 +8,8 @@ body {
   background-color: #dae0e6;
 }
 
+/************ Begin header style ***********/
+
 .header {
   height: 8vh;
   background-color: #fff;
@@ -61,3 +63,5 @@ body {
 #log-in:hover {
   background-color: #e4f1f7;
 }
+/************ End header style ***********/
+
