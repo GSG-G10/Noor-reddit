@@ -1,5 +1,5 @@
-const signUp = require('./signUp');
-const login = require('./login');
+const {getSignUpPage,createUser,signUp} = require('./signUp');
+const {getLogin,login} = require('./login');
 
 
-module.exports = {signUp, login};
+module.exports = {getSignUpPage, getLogin, createUser, signUp,login};

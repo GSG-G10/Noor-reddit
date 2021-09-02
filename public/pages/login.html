@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,30 @@
     <title>Reddit login</title>
     <link rel="stylesheet" href="../styles/signUp.css">
 </head>
+
 <body>
-    <form action="#" method="post" class="login-form">
+    <form action="/login" method="post" class="login-form">
         <h2>Log in</h2>
-        <p>
+        <div>
             <label for="Email" class="floatLabel">Email</label>
-            <input id="Email" name="Email" type="email">
-        </p>
-        <p>
+            <input id="Email" name="email" type="email" required>
+        </div>
+        <div>
             <label for="password" class="floatLabel">Password</label>
-            <input id="password" name="password" type="password">
-        </p>
-        <p>New to Reddit?</p>
-        <p>
-            <input type="submit" value="Create My Account" id="submit">
-        </p>
+            <input id="password" name="password" type="password" required>
+        </div>
+        <div>
+            <div class="check">
+                <p>New to Reddit?</p>
+                <a href="/signUp">Sign Up</a>
+            </div>
+
+            <p>
+                <input type="submit" value="Log in" id="submit">
+            </p>
+        </div>
+
     </form>
 </body>
+
 </html>
