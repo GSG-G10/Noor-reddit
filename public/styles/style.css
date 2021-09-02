@@ -56,7 +56,7 @@ body {
   color: #2596be;
 }
 
-.button-decoration{
+.button-decoration {
   text-decoration: none;
 }
 
@@ -70,21 +70,77 @@ body {
 /************ End header style ***********/
 
 /*************Start Trending today style *********/
-.trending_today_container{
-  height: 7vh;
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.trending_today_container {
   padding: 2%;
   margin-left: 12%;
+  height: 39vh;
 }
 
-h5{
-  font-size: 14px;
+h5 {
+  font-size: 16px;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 20px;
 }
 
+.trending {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 1%;
+}
+
+#trending-image {
+  height: 28vh;
+  width: 17vw;
+  border-radius: 13px;
+}
+
+/*************Start Popular posts style *********/
+.popular-posts-container {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-between;
+}
+#popular-posts {
+  margin-top: 2%;
+  margin-left: 14%;
+}
+
+.static-container {
+  background: white;
+  height: 10vh;
+  width: 44%;
+  margin-left: 14%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hot {
+  border-radius: 42px;
+  width: 17%;
+  border: none;
+  color: #2596be;
+  height: 6vh;
+  font-weight: 800;
+}
+
+.top {
+  border: none;
+  background: #fff;
+  color: rgb(129, 126, 126);
+}
 /*************Start Post container style *********/
 
-.user-profile{
+.user-profile {
   display: flex;
   width: 30%;
   align-items: center;
@@ -93,12 +149,12 @@ h5{
   background: #fff;
 }
 
-.posts-container{
+.posts-container {
   height: 36vh;
   padding: 3%;
 }
 
-.post-container{
+.post-container {
   background: rgb(255, 255, 255);
   height: 26vh;
   width: 42%;
@@ -107,7 +163,7 @@ h5{
   margin-left: 10%;
 }
 
-#post-container{
+#post-container {
   display: flex;
   width: 38vw;
   justify-content: space-around;
@@ -115,28 +171,28 @@ h5{
   height: 100%;
 }
 
-.area-post{
+.area-post {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
 
-.add-post{
+.add-post {
   height: 26%;
   width: 8%;
   border: none;
   background: #fff;
 }
 
-.fas{
+.fas {
   font-size: 29px;
 }
 
 /*************End Post container style *********/
 
 /*************Start Poster container style *********/
-.poster-container{
+.poster-container {
   background-color: blue;
   height: 44vh;
   width: 40%;
@@ -147,7 +203,7 @@ h5{
   flex-direction: column;
 }
 
-#post-image{
+#post-image {
   height: 26vh;
   width: 26vh;
 }
