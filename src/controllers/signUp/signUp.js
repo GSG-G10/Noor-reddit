@@ -8,7 +8,7 @@ const signUp = (req, res) => {
     return checkUser(email)
       .then(data =>{ 
           if(data.rows.length === 0){
-            createCookie(email,res);
+            createCookie(email,userName,res);
             createUser(userName, firstName, lastName, email, password);
           }else{
             res.json('User is already exists. Try to log in!')
