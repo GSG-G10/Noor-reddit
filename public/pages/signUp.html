@@ -10,28 +10,37 @@
 </head>
 
 <body>
-    <form action="#" method="post" class="sign-up-form">
+    <form action="/signup" method="post" class="sign-up-form">
         <h2>Sign Up</h2>
-        <p>
-            <label for="Email" class="floatLabel">Email</label>
-            <input id="Email" name="Email" type="email">
-        </p>
-        <p>
-            <label for="password" class="floatLabel">Password</label>
-            <input id="password" name="password" type="password">
-        </p>
-        <p>
-            <label for="confirm_password" class="floatLabel">Confirm Password</label>
-            <input id="confirm_password" name="confirm_password" type="password">
-        </p>
-        <p>
+        <div>
             <label for="username" class="username">Username</label>
-            <input id="username" name="username" type="text">
-        </p>
-        <p>Already a redditor?</p>
-        <p>
-            <input type="submit" value="Create My Account" id="submit">
-        </p>
+            <input id="username" name="userName" type="text" required>
+        </div>
+        <div>
+            <label for="username" class="username">First name</label>
+            <input id="username" name="firstName" type="text" required>
+        </div>
+        <div>
+            <label for="username" class="username">Last name</label>
+            <input id="username" name="lastName" type="text" required>
+        </div>
+        <div>
+            <label for="Email" class="floatLabel">Email</label>
+            <input id="Email" name="email" type="email" required>
+        </div>
+        <div>
+            <label for="password" class="floatLabel">Password</label>
+            <input id="password" name="password" type="password" required>
+        </div>
+        <div>
+            <div class="check">
+                <p>Already a redditor?</p>
+                <a href="/login" class="log">Log in</a>
+            </div>
+            <p>
+                <input type="submit" value="Create My Account" id="submit">
+            </p>
+        </div>
     </form>
 </body>
 
