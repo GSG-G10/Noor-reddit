@@ -1,16 +1,18 @@
 const bcrypt = require('bcryptjs');
-const { getPassword } = require('../../database/quires');
+const {getUsername} = require('../../database/quires');
 const { createCookie } = require('../../utilities');
+
 
 const login = (req, res) => {
     const { email, password } = req.body;
 
-    return getPassword(email)
+    return getUsername(email)
         .then(data => {
-            bcrypt.compare(password, data.rows[0].password)
+            const username = data.username;
+            bcrypt.compare(password, data.password)
                 .then(data => {
                     if (data) {
-                        createCookie(email, res);
+                        createCookie(email,username, res);
                     } else {
                         res.status(401).send('Invalid email or password!')
                     }

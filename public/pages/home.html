@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Home</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://kit.fontawesome.com/b3b8ba3066.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo-container">
+            <img class="header-logo" src="../images/reddit-logo-2.jpg" alt="reddit logo">
+        </div>
+        <div class="header-buttons-container">
+            <button class="button-style" id="Sign-up"><a class="button-decoration" href="/">Log out</a></button>
+            <button class="user-profile">
+                <i class='fas fa-user-circle' style='font-size:30px'></i>
+                <p>Hi <span id="username"> </span></p>
+            </button>
+            
+        </div>
+    </header>
+    <section class="posts-container">
+        <div class="post-container">
+            <form action="/home" method="post" class="post-form-container">
+                <div id="post-container">
+                    <i class='fas fa-user-circle' style='font-size:30px'></i>
+                <div class="area-post">
+                    <input type="text" name="title" placeholder="Title">
+                    <textarea rows="4" cols="50" name="postContainer" form="usrform" placeholder="Create Post"></textarea>
+                    <input type="text" name="imgUrl" placeholder="Add Image Url">
+                </div>
+                <button class="add-post"><i class="fas fa-plus-square"></i></button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="poster-container"> 
+     <p>Posted by<span id="username"></span></p>
+     <h3 id="title"></h3>
+     <p id="content"></p>
+     <img src="" alt="post image" id="post-image">
+    </section>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/getPost.js"></script>
+    
+</body>
+</html>
