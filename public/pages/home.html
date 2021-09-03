@@ -18,7 +18,7 @@
             <button class="button-style" id="Sign-up"><a class="button-decoration" href="/">Log out</a></button>
             <button class="user-profile">
                 <i class='fas fa-user-circle' style='font-size:30px'></i>
-                <p>Hi <span id="username"> </span></p>
+                <a href="/user/:user"><p>Hi <span id="username"> </span></p></a>
             </button>
             
         </div>
@@ -30,7 +30,8 @@
                     <i class='fas fa-user-circle' style='font-size:30px'></i>
                 <div class="area-post">
                     <input type="text" name="title" placeholder="Title">
-                    <textarea rows="4" cols="50" name="postContainer" form="usrform" placeholder="Create Post"></textarea>
+                    <!-- <textarea rows="4" cols="50" name="textarea" form="usrform" placeholder="Create Post"></textarea> -->
+                    <input type="text" name="postText" placeholder="Title">
                     <input type="text" name="imgUrl" placeholder="Add Image Url">
                 </div>
                 <button class="add-post"><i class="fas fa-plus-square"></i></button>
@@ -38,15 +39,12 @@
             </form>
         </div>
     </section>
-    <section class="poster-container"> 
-     <p>Posted by<span id="username"></span></p>
-     <h3 id="title"></h3>
-     <p id="content"></p>
-     <img src="" alt="post image" id="post-image">
+    <section class="container-posts">
+         
     </section>
 
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/getPost.js"></script>
+    <script src="../scripts/getUsername.js"></script>
+    <script src="../scripts/getDeletePost.js"></script>
     
 </body>
 </html>

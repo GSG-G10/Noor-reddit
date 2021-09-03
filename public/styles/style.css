@@ -74,7 +74,7 @@ body {
 #page-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 65vh;
 }
 .trending_today_container {
   padding: 2%;
@@ -192,20 +192,37 @@ h5 {
 /*************End Post container style *********/
 
 /*************Start Poster container style *********/
-.poster-container {
-  background-color: blue;
-  height: 44vh;
+.container-posts{
+  height: 218vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.postt-container {
+  background-color: rgb(237 239 241);
+  height: 52vh;
   width: 40%;
   border: solid 1px #b7b4b4;
-  background: #fff;
   margin-left: 12%;
   display: flex;
   flex-direction: column;
+  padding: 1%;
 }
 
-#post-image {
-  height: 26vh;
-  width: 26vh;
+.image{
+  height: 18vh;
+  width: 14vw;
+  margin-top: 4%;
+}
+
+.title{
+  font-size: 22px;
+  font-family: fantasy;
+  margin-top: 6%;
+}
+
+.username{
+  font-family: monospace;
 }
 
 /*****************************************************/

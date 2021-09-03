@@ -5,7 +5,6 @@ const { createCookie } = require('../../utilities');
 
 const login = (req, res) => {
     const { email, password } = req.body;
-
     return getUsername(email)
         .then(data => {
             const username = data.username;
