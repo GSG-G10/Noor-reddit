@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Reddit Home</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://kit.fontawesome.com/b3b8ba3066.js" crossorigin="anonymous"></script>
-    
+
 </head>
+
 <body>
     <header class="header">
         <div class="header-logo-container">
@@ -18,9 +20,11 @@
             <button class="button-style" id="Sign-up"><a class="button-decoration" href="/">Log out</a></button>
             <button class="user-profile">
                 <i class='fas fa-user-circle' style='font-size:30px'></i>
-                <a href="/user/:user"><p>Hi <span id="username"> </span></p></a>
+                <a id="profile-link">
+                    <p>Hi <span id="username"> </span></p>
+                </a>
             </button>
-            
+
         </div>
     </header>
     <section class="posts-container">
@@ -28,23 +32,25 @@
             <form action="/home" method="post" class="post-form-container">
                 <div id="post-container">
                     <i class='fas fa-user-circle' style='font-size:30px'></i>
-                <div class="area-post">
-                    <input type="text" name="title" placeholder="Title">
-                    <!-- <textarea rows="4" cols="50" name="textarea" form="usrform" placeholder="Create Post"></textarea> -->
-                    <input type="text" name="postText" placeholder="Title">
-                    <input type="text" name="imgUrl" placeholder="Add Image Url">
-                </div>
-                <button class="add-post"><i class="fas fa-plus-square"></i></button>
+                    <div class="area-post">
+                        <input type="text" name="title" placeholder="Title">
+                        <!-- <textarea rows="4" cols="50" name="textarea" form="usrform" placeholder="Create Post"></textarea> -->
+                        <input type="text" name="postText" placeholder="Title">
+                        <input type="text" name="imgUrl" placeholder="Add Image Url">
+                    </div>
+                    <button class="add-post"><i class="fas fa-plus-square"></i></button>
                 </div>
             </form>
         </div>
     </section>
     <section class="container-posts">
-         
+
     </section>
 
     <script src="../scripts/getUsername.js"></script>
-    <script src="../scripts/getDeletePost.js"></script>
-    
+    <script src="../scripts/createPostCard.js"></script>
+    <script src="../scripts/getAllPosts.js"></script>
+
 </body>
+
 </html>

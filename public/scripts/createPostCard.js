@@ -30,32 +30,23 @@ const createPost = (data) => {
     postId.type = 'hidden';
     postId.value = post_id;
     postId.name = 'postId';
-    const deleteButton = createElement('button','delete-button',postContainer,'Delete');
+    const deleteButton = createElement('button', 'delete-button', postContainer, 'Delete');
     deleteButton.onclick = () => {
-        fetch('/delete', {method: 'DELETE',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-         body: JSON.stringify({postId: postId.value})
+        fetch('/delete', {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ postId: postId.value })
         })
-    }   
+    }
 }
 
 
-fetch('/posts')
-    .then(
-        result => result.json())
-    .then(
-        data => {
-            for (let i = 0; i < data.length; i++) {
-                createPost(data[i]);
-            }
-        }
-    )
 
 
-    
+
 
 
 
