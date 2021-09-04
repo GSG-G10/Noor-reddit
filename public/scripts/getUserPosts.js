@@ -5,8 +5,11 @@ fetch('/posts')
     .then(
         data => {
             for (let i = 0; i < data.length; i++) {
-                if (data[i].username === cookie)
+                if (data[i].username === cookie) {
                     createPost(data[i]);
+                    createDeleteButton(data[i]);
+                }
+
             }
         }
 
