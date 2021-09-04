@@ -16,21 +16,28 @@ const createElement = (tag, className, parent, text) => {
     return ele;
 };
 
+const postContainer = createElement('div', 'postt-container', containerPosts, '');
 
 const createPost = (data) => {
-    const postContainer = createElement('div', 'postt-container', containerPosts, '');
-    const { post_id, username, title, content, image } = data;
-    createElement('p', 'username', postContainer, `Posted by ${username}`);
-    createElement('h5', 'title', postContainer, title);
-    createElement('p', 'content', postContainer, content);
+    const SmallContainer = createElement('div', 'small-container', postContainer, '');
+    const { username, title, content, image } = data;
+    createElement('p', 'username', SmallContainer, `Posted by ${username}`);
+    createElement('h5', 'title', SmallContainer, title);
+    createElement('p', 'content', SmallContainer, content);
     if (image) {
-        createElement('img', 'image', postContainer, image);
+        createElement('img', 'image', SmallContainer, image);
     }
+}
+
+const createDeleteButton = (data) => {
+    const deleteCommentButton = createElement('div', 'butttons-container', postContainer, '')
+    const { post_id } = data;
     const postId = createElement('input', 'post_id', postContainer, '');
     postId.type = 'hidden';
     postId.value = post_id;
     postId.name = 'postId';
-    const deleteButton = createElement('button', 'delete-button', postContainer, 'Delete');
+    const deleteButton = createElement('button', 'delete-button', deleteCommentButton, 'Delete');
+    const CommentButton = createElement('button', 'comment-button', deleteCommentButton, 'Add comment');
     deleteButton.onclick = () => {
         fetch('/delete', {
             method: 'DELETE',
