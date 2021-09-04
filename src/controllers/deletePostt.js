@@ -1,8 +1,13 @@
-const {deletePost} = require('../database/quires');
+const {deletePost,deleteComments} = require('../database/quires');
 
 const deletePostt = (req,res) => {
       const {postId} = req.body;
-      return deletePost(postId)
+      return deleteComments(postId)
+      .then(
+        () => {
+            return deletePost(postId)
+        }
+      )
       .then(
           res.redirect('/home')
       )

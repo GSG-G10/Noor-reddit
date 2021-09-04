@@ -29,15 +29,20 @@ const createPost = (data) => {
     }
 }
 
-const createDeleteButton = (data) => {
-    const deleteCommentButton = createElement('div', 'butttons-container', postContainer, '')
+const storePostId = (data) => {
     const { post_id } = data;
     const postId = createElement('input', 'post_id', postContainer, '');
     postId.type = 'hidden';
     postId.value = post_id;
     postId.name = 'postId';
+    return post_id;
+}
+
+const createDeleteButton = (data) => {
+    const deleteCommentButton = createElement('div', 'butttons-container', postContainer, '')
+    const postId = storePostId(data);
     const deleteButton = createElement('button', 'delete-button', deleteCommentButton, 'Delete');
-    const CommentButton = createElement('button', 'comment-button', deleteCommentButton, 'Add comment');
+    const CommentButton = createElement('button', 'comment-button', deleteCommentButton, 'Comment');
     deleteButton.onclick = () => {
         fetch('/delete', {
             method: 'DELETE',
@@ -45,10 +50,11 @@ const createDeleteButton = (data) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ postId: postId.value })
+            body: JSON.stringify({ postId: postId })
         })
     }
 }
+
 
 
 
