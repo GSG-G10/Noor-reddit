@@ -5,7 +5,8 @@ const addPosts = require('./addPost');
 const gettPosts = require('./gettPosts');
 const getUserProfile = require('./getUserProfile');
 const deletePostt = require('./deletePostt');
+const addComments = require('./addComments')
 
 
 
-module.exports = {getSignUpPage, getLogin, createUser, signUp,login,getHomePage,addPosts,gettPosts,getUserProfile,deletePostt};
+module.exports = {getSignUpPage, getLogin, createUser, signUp,login,getHomePage,addPosts,gettPosts,getUserProfile,deletePostt,addComments};

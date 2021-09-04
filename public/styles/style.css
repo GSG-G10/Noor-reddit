@@ -236,4 +236,9 @@ h5 {
   display: flex;
 }
 
+.CommentFormContainer{
+  font-family:sans-serif;
+  font-size:1.2em;
+}
+
 /*****************************************************/
