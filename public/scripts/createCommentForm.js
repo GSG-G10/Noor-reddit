@@ -1,3 +1,4 @@
+
 const createCommentForm = (data) => {
     const CommentForm = createElement('form', 'comment-form', postContainer, '');
     CommentForm.action = '/comment';
